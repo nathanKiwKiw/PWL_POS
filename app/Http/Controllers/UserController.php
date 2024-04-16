@@ -165,8 +165,7 @@ class UserController extends Controller
         //     $user = UserModel::find($id);
         //     $user->delete();
 
-<<<<<<< HEAD
-        //     return redirect('/user');
+        // return redirect('/user');
       
     // JS4 prac-2.7
         $user = UserModel::with('level')->get();
@@ -174,10 +173,6 @@ class UserController extends Controller
 
         $user = UserModel::with('level')->get();
         return view('user', ['data' => $user]);
+        return redirect('/user');
     }
 }
-=======
-            return redirect('/user');
-    }
-}
->>>>>>> 2226c9ef172844f32ae77de5b5eb8a9867c3fbdf
