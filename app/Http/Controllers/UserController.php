@@ -22,9 +22,24 @@ class UserController extends Controller
         // $user = UserModel::all();
         // return view('user', ['data' => $user]);
 
-        $user = UserModel::find(1);
+        // $user = UserModel::find(1);
+        // return view('user', ['data' => $user]);
+
+        // $user = UserModel::where('level_id', 1)->first(); 
+        // return view('user', ['data' => $user]);
+
+        // $user = UserModel::firstWhere('level_id', 1); 
+        // return view('user', ['data' => $user]);
+
+        // $user = UserModel::findOr(1, ['username', 'nama'], function (){
+        //     abort(404);
+        // });
+        // return view('user', ['data' => $user]);
+
+        $user = UserModel::findOr(20, ['username', 'nama'], function (){
+            abort(404);
+        });
         return view('user', ['data' => $user]);
-        
     }
 }
         
