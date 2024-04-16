@@ -164,8 +164,6 @@ class UserController extends Controller
         // public function hapus($id) {
         //     $user = UserModel::find($id);
         //     $user->delete();
-
-<<<<<<< HEAD
         //     return redirect('/user');
       
     // JS4 prac-2.7
@@ -176,8 +174,6 @@ class UserController extends Controller
         return view('user', ['data' => $user]);
     }
 }
-=======
             return redirect('/user');
     }
 }
->>>>>>> 2226c9ef172844f32ae77de5b5eb8a9867c3fbdf
