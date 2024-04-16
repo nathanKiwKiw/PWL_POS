@@ -164,8 +164,12 @@ class UserController extends Controller
         // public function hapus($id) {
         //     $user = UserModel::find($id);
         //     $user->delete();
+<<<<<<< HEAD
 
         // return redirect('/user');
+=======
+        //     return redirect('/user');
+>>>>>>> 26c8f03c51e413503387fcd6cc3dbecccaed50a8
       
     // JS4 prac-2.7
         $user = UserModel::with('level')->get();
@@ -176,3 +180,9 @@ class UserController extends Controller
         return redirect('/user');
     }
 }
+<<<<<<< HEAD
+=======
+            return redirect('/user');
+    }
+}
+>>>>>>> 26c8f03c51e413503387fcd6cc3dbecccaed50a8
