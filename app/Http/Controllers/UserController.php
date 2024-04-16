@@ -166,18 +166,5 @@ class UserController extends Controller
             $user->delete();
 
             return redirect('/user');
-        }
-    }
-}
-    
-
-        
-        
-    // JS4 prac-2.7
-        $user = UserModel::with('level')->get();
-        dd($user);
-
-        $user = UserModel::with('level')->get();
-        return view('user', ['data' => $user]);
     }
 }
