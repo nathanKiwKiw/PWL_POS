@@ -28,9 +28,12 @@ Route::get('/user/tambah',[UserController::class,'tambah'])->name('/user/tambah'
 Route::get('/user/ubah/{id}',[UserController::class,'ubah'])->name('/user/ubah');
 Route::get('/user/hapus{id}',[UserController::class,'hapus'])->name('/user/hapus');
 Route::get('/user/tambah_simpan',[UserController::class,'tambah_simpan'])->name('/user/tambah_simpan');
-Route::get('/kategori',[KategoriController::class,'index']);
-Route::get('/kategori/update/{id}',[KategoriController::class,'update'])->name('/kategori/update');
-Route::get('/kategori/delete/{id}',[KategoriController::class,'delete'])->name('/kategori/delete');
+Route::get('/kategori', [KategoriCOntroller::class, 'index']);
+Route::get('/kategori/create', [KategoriController::class, 'create'])->name('kategori.create');;
+Route::post('/kategori', [KategoriController::class, 'store']);
+Route::get('/kategori/update/{id}', [KategoriController::class, 'update'])->name('kategori.update');
+Route::put('/kategori/update_save/{id}', [KategoriController::class, 'update_save'])->name('kategori.update_save');
+Route::get('/kategori/delete/{id}', [KategoriController::class, 'delete'])->name('kategori.delete');
 
 
 
