@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\LoginController;
-
+use App\Http\Controllers\Api\TransaksiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,7 +23,7 @@ use App\Http\Controllers\Api\LoginController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
     Route::post('/register', App\Http\Controllers\Api\RegisterController::class)->name('register');
-
+    Route::post('/register1', App\Http\Controllers\Api\RegisterController::class)->name('register1');
     Route::post('/register', App\Http\Controllers\Api\RegisterController::class)->name('register');
 Route::post('/login', App\Http\Controllers\Api\LoginController::class)->name('login');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
@@ -53,6 +53,14 @@ Route::post('barangs', [BarangController::class, 'store']);
 Route::get('barangs/{barang}', [BarangController::class, 'show']);
 Route::put('barangs/{barang}', [BarangController::class, 'update']);
 Route::delete('barangs/{barang}', [BarangController::class, 'destroy']);
+
+Route::delete('barangs/{barang}', [BarangController::class, 'destroy']);
+
+Route::get('/', [TransaksiController::class, 'index']);
+Route::post('/', [TransaksiController::class, 'store']);
+Route::get('/{transaksi}', [TransaksiController::class, 'show']);
+Route::put('/{transaksi}', [TransaksiController::class, 'update']);
+Route::delete('/{transaksi}', [TransaksiController::class, 'destroy']);
 
 });
 Route::post('/logout', App\Http\Controllers\Api\LogoutController::class)->name('logout');
