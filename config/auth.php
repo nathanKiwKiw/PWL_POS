@@ -62,7 +62,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\UserModels\User::class,
+            'model' => App\Models\User::class,
         ],
 
         // 'users' => [
@@ -99,7 +99,6 @@ return [
         ],
     ],
 
-    'password_timeout' => 10800,
     /*
     |--------------------------------------------------------------------------
     | Password Confirmation Timeout
